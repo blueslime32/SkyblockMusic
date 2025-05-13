@@ -1642,6 +1642,41 @@ public class ModConfig extends Config {
     public static int dungeonBossVolume = 50;
 
     @CfgName(
+            name = "F6Music",
+            category = "toggles"
+    )
+    @Switch(
+            name = "F6 Boss (Sadan) Music",
+            category = "Music",
+            subcategory = "Music"
+    )
+    public static boolean floorSixMusic = false;
+
+    @CfgName(
+            name = "F6Volume",
+            category = "music"
+    )
+    @Slider(
+            name = "F6 Boss (Sadan) Music Volume",
+            min = 0, max = 100,
+            category = "Music",
+            subcategory = "Music"
+    )
+    public static int floorSixVolume = 50;
+
+    @CfgName(
+            name = "Phase1Volume",
+            category = "music"
+    )
+    @Slider(
+            name = "F7 Phase 1 Music Volume",
+            min = 0, max = 100,
+            category = "Music",
+            subcategory = "Music"
+    )
+    public static int phase1Volume = 50;
+
+    @CfgName(
             name = "Phase2Volume",
             category = "music"
     )
@@ -2040,6 +2075,121 @@ public class ModConfig extends Config {
             subcategory = "Music"
     )
     public static int parkVolume = 50;
+
+    @CfgName(
+        name = "JerryMusic",
+        category = "toggles"
+    )
+    @Switch(
+        name = "Jerry's Workshop Music",
+        category = "Music",
+        subcategory = "Music"
+    )
+    public static boolean jerryMusic = false;
+
+    @CfgName(
+        name = "JerryVolume",
+        category = "music"
+    )
+    @Slider(
+        name = "Jerry's Workshop Music Volume",
+        min = 0, max = 100,
+        category = "Music",
+        subcategory = "Music"
+    )
+    public static int jerryVolume = 50;
+
+    @CfgName(
+        name = "JerryFightMusic",
+        category = "toggles"
+    )
+    @Switch(
+        name = "Season of Jerry Music",
+        category = "Music",
+        subcategory = "Music"
+    )
+    public static boolean jerryFightMusic = false;
+
+    @CfgName(
+        name = "JerryFightVolume",
+        category = "music"
+    )
+    @Slider(
+        name = "Season of Jerry Volume",
+        min = 0, max = 100,
+        category = "Music",
+        subcategory = "Music"
+    )
+    public static int jerryFightVolume = 50;
+
+    @CfgName(
+            name = "JingleF6Volume",
+            category = "music"
+    )
+    @Slider(
+            name = "F6 End Jingle Music Volume",
+            min = 0, max = 100,
+            category = "Music",
+            subcategory = "Music"
+    )
+    public static int jinglef6Volume = 50;
+
+    @CfgName(
+            name = "JingleF6Music",
+            category = "toggles"
+    )
+    @Switch(
+            name = "F6 End Jingle Music",
+            category = "Music",
+            subcategory = "Music"
+    )
+    public static boolean jinglef6Music = false;
+
+    @CfgName(
+            name = "JingleF7Volume",
+            category = "music"
+    )
+    @Slider(
+            name = "F7 End Jingle Music Volume",
+            min = 0, max = 100,
+            category = "Music",
+            subcategory = "Music"
+    )
+    public static int jinglef7Volume = 50;
+
+    @CfgName(
+            name = "JingleF7Music",
+            category = "toggles"
+    )
+    @Switch(
+            name = "F7 End Jingle Music",
+            category = "Music",
+            subcategory = "Music"
+    )
+    public static boolean jinglef7Music = false;
+
+    @CfgName(
+            name = "JingleJerryVolume",
+            category = "music"
+    )
+    @Slider(
+            name = "Season of Jerry End Jingle Music Volume",
+            min = 0, max = 100,
+            category = "Music",
+            subcategory = "Music"
+    )
+    public static int jingleJerryVolume = 50;
+
+    @CfgName(
+            name = "JingleJerryMusic",
+            category = "toggles"
+    )
+    @Switch(
+            name = "Season of Jerry End Jingle Music",
+            category = "Music",
+            subcategory = "Music"
+    )
+    public static boolean jingleJerryMusic = false;
 
     // Colors
     /* List of colours, copy paste

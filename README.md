@@ -1,5 +1,5 @@
-# Danker's Skyblock Mod
-QOL changes that enhances your Hypixel Skyblock experience. Created to add features I couldn't find in a mod, or if the mod was paid (which is against the [Mojang TOS](https://account.mojang.com/documents/commercial_guidelines)).
+# Danker's Skyblock Mod - Music Edition
+QOL changes that enhances your Hypixel Skyblock experience. Created to add features I couldn't find in a mod, or if the mod was paid (which is against the [Mojang TOS](https://account.mojang.com/documents/commercial_guidelines)). This is a fork of DSM that specializes more on the Custom Music aspect.
 
 Discord Server: https://discord.gg/QsEkNQS
 
@@ -179,6 +179,8 @@ Shortcut commands that save you the time of typing the whole warp command.
   - Blood room: `bloodroom.wav`
   - Dungeon boss: `dungeonboss.wav`
   - Dungeon hub: `dungeonhub.wav`
+  - Floor 6 (Sadan): `floorsix.wav`
+  - F7 Phase 1 (Maxor): `phaseone.wav`
   - F7 Phase 2 (Storm): `phasetwo.wav`
   - F7 Phase 3 (Goldor): `phasethree.wav`
   - F7 Phase 4 (Necron): `phasefour.wav`
@@ -192,13 +194,31 @@ Shortcut commands that save you the time of typing the whole warp command.
   - Dwarven Mines: `dwarvenmines.wav`
   - Crystal Hollows: `crystalhollows.wav`
   - Spider's Den: `spidersden.wav`
-  - Crimson Isle: `crimsonisle.wav`
   - Kuudra: `kuudra.wav`
   - The End: `end.wav`
   - The Park: `park.wav`
+  - Jerry's Workshop: `jerryworskhop.wav`
+  - Season of Jerry: `jerryfight.wav`
+  - "DEFEND JERRY'S WORKSHOP" Alert: `jerry_prefight.wav`
+### Crimson Isle (Missing Blazing Volcano, Burning Desert & Mystic Marsh support)
+  - Crimson Isle: `crimsonisle.wav`
+  - The Dojo: `dojo.wav`
+  - The Dojo Intro: `dojo_start.wav`
+### Jingles
+  - Blood room end jingle: `bloodroomend.wav` (Support for dying in the middle of blood room will be added)
+  - F7 Victory Jingle: `jinglefloorsevenwin.wav`
+  - F7 Defeat Jingle: `jinglefloorsevenlose.wav`
+  - F6 Victory Jingle: `jinglefloorsixwin.wav`
+  - F6 Defeat Jingle: `jinglefloorsixlose.wav`
+  - Season of Jerry Victory Jingle: `jinglejerrywin.wav`
+  - Season of Jerry Defeat Jingle: `jinglejerrylose.wav`
+
+
 2. Either run `/dsmmusic reload` or restart your game.
 3. Enable the custom music in `/dsm`.
 4. (Optional) Change the volume of the music with `/dsmmusic volume`.
+
+As more updates to this fork come more areas will be added. Since sublocations (like the Dojo and stuff) are handled with coordinates, it would be greatly appreciated if anybody could contribute with the start and end of both X & Z coordinates of each sublocation.
 
 #### Shuffling
 By adding numbers to the end of the file, you can have multiple music files for the same area. One of them will be randomly selected (the same song could play twice in a row). For example:
@@ -206,6 +226,11 @@ By adding numbers to the end of the file, you can have multiple music files for 
 - dungeon1.wav
 - dungeon2.wav
 - dungeon99.wav
+
+#### TO-DO LIST
+- Fade-in and out system when changing sublocations or phases and being able to toggle it
+- Dynamic volume without having to restart sound system
+- Actually good looping system (maybe)
 </details>
 
 <details>

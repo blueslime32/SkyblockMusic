@@ -10,6 +10,7 @@ import me.Danker.handlers.APIHandler;
 import me.Danker.handlers.ScoreboardHandler;
 import me.Danker.locations.DungeonFloor;
 import me.Danker.locations.Location;
+import me.Danker.locations.SubLocation;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.network.NetworkPlayerInfo;
@@ -20,7 +21,10 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.scoreboard.Score;
 import net.minecraft.scoreboard.ScoreObjective;
+import net.minecraft.scoreboard.ScorePlayerTeam;
+import net.minecraft.scoreboard.Scoreboard;
 import net.minecraft.util.*;
 
 import java.awt.*;
@@ -34,6 +38,7 @@ public class Utils {
     
     public static boolean inSkyblock = false;
     public static Location currentLocation = Location.NONE;
+    public static SubLocation currentSubLocation = SubLocation.NONE;
     public static DungeonFloor currentFloor = DungeonFloor.NONE;
     public static int[] skillXPPerLevel = {0, 50, 125, 200, 300, 500, 750, 1000, 1500, 2000, 3500, 5000, 7500, 10000, 15000, 20000, 30000, 50000,
                                            75000, 100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000, 1100000,
@@ -134,6 +139,69 @@ public class Utils {
             }
         }
         inSkyblock = false;
+    }
+
+    /*
+    public static List<String> getSidebarLines() {
+    List<String> lines = new ArrayList<>();
+    try {
+        Minecraft mc = Minecraft.getMinecraft();
+        if (mc.theWorld == null) return lines;
+
+        Scoreboard sb = mc.theWorld.getScoreboard();
+        ScoreObjective obj = sb.getObjectiveInDisplaySlot(1);
+        if (obj == null) return lines;
+
+        if (sb.getTeams().stream().anyMatch(t -> t.getRegisteredName().contains("fkt_"))) {
+            System.out.println("[DEBUG] FKT team detected, skipping scoreboard read");
+            return lines;
+        }
+
+        // safe to parse...
+    } catch (Exception e) {
+        System.out.println("Sidebar read failed");
+    }
+    return lines;
+    }
+
+    public static void checkSidebarLocation() {
+        //Minecraft mc = Minecraft.getMinecraft();
+        //if (mc != null && mc.theWorld != null && !mc.isSingleplayer()) {
+            //ScoreObjective scoreboardObj = mc.theWorld.getScoreboard().getObjectiveInDisplaySlot(1);
+            //if (scoreboardObj != null) {
+            //    String scObjName = ScoreboardHandler.cleanSB(scoreboardObj.getDisplayName());
+            //    if (scObjName.contains("⏣")) {
+            //        currentSubLocation = SubLocation.fromSidebar(scObjName.substring(scObjName.indexOf("⏣") + 2));
+            //        return;
+            //    }
+            //}
+
+        //}
+
+        for (String line : getSidebarLines()) {
+        if (line.contains("⏣")) {
+            String sublocationName = line.substring(line.indexOf("⏣") + 2).trim();
+            currentSubLocation = SubLocation.fromSidebar(sublocationName);
+            System.out.println("Detected sublocation: " + currentSubLocation);
+            }
+        }
+    }
+    
+    */
+    public static String sublocationUtil() {
+        EntityPlayer player = Minecraft.getMinecraft().thePlayer;
+        if (player == null) return null;
+
+        BlockPos pos = player.getPosition();
+        int x = pos.getX();
+        int z = pos.getZ();
+
+        // Dojo
+        if (x >= -258 && x <= -179 && z >= -646 && z <= -558) {
+            return "Dojo";
+        } else {
+            return "Normal";
+        }
     }
 
     public static void checkTabLocation() {
